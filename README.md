@@ -5,7 +5,7 @@
 - Nandana Tsany Farrel Arkanan NIM : 2311102143
 - Muhammad Deka Maulana        NIM : 2311102148
 
-Kelas       : S1IF-11-D
+Kelas       : S1IF-11-D</br>
 Mata Kuliah : Struktur Data Dan Algoritma
 
 Fakultas Informatika</br>
