@@ -1,3 +1,10 @@
+/*
+Nama Kelompok :
+Naufal Luthfi Assary         - 2311102125
+Nandana Tsany Farrel Arkanan - 2311102143
+Muhammad Deka Maulana        - 2311102148
+*/
+
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -138,11 +145,10 @@ int main() {
         float total_harga = film.harga * jumlah_tiket;
         float potongan = (jumlah_tiket >= 5) ? 0.1 * total_harga : 0;
         float ppn = 0.02 * total_harga;
-        float total_bayar = total_harga - potongan + ppn;
+        float total_bayar = total_harga + ppn;
 
         // Menampilkan detail pembayaran
         cout << "\n Pembayaran : Rp." << total_harga << "\n";
-        cout << " Potongan : Rp." << potongan << "\n";
         cout << " PPN : Rp." << ppn << "\n";
         cout << " Total Bayar : Rp." << total_bayar << "\n";
 
