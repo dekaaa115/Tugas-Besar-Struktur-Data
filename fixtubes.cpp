@@ -11,7 +11,7 @@ Muhammad Deka Maulana        - 2311102148
 
 using namespace std;
 
-const int MAX_KURSI = 10; // Konstanta untuk jumlah kursi maksimal
+const int MAX_KURSI = 10; 
 
 // Struktur untuk menyimpan data film
 struct Film {
@@ -22,8 +22,8 @@ struct Film {
 
 // Struktur untuk node dalam linked list
 struct Node {
-    int data; // Data kursi yang terisi
-    Node* next; // Pointer ke node berikutnya
+    int data; 
+    Node* next; 
 };
 
 // Fungsi untuk menampilkan daftar film
@@ -47,12 +47,13 @@ Film pilihFilm() {
     char kode;
     char waktu;
     Film film;
-    
+
+    Pilih_Film:
     cout << " Kode Film [1/2/3] : ";
     cin >> kode;
     cout << " Waktu Tayang Pagi/Siang [P/S] : ";
     cin >> waktu;
-    
+
     // Menentukan film dan harga berdasarkan input
     switch(kode) {
         case '1':
@@ -71,8 +72,8 @@ Film pilihFilm() {
             film.waktu = (waktu == 'P' || waktu == 'p') ? "Pagi <12:00-14:00>" : "Siang <15:00-17:00>";
             break;
         default:
-            cout << " Inputan Kode Film Tidak Sesuai\n";
-            break;
+            cout << " Inputan Kode Film Tidak Sesuai, silahkan coba lagi.\n";
+            goto Pilih_Film;
     }
     return film;
 }
@@ -143,7 +144,6 @@ int main() {
 
         // Menghitung total harga, potongan, PPN, dan total bayar
         float total_harga = film.harga * jumlah_tiket;
-        float potongan = (jumlah_tiket >= 5) ? 0.1 * total_harga : 0;
         float ppn = 0.02 * total_harga;
         float total_bayar = total_harga + ppn;
 
